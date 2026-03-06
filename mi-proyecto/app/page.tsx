@@ -1,4 +1,6 @@
 import Banner from "./components/common/banner";
+import ViewComponents from "./components/common/viewComponents";
+import Footer from "./components/constants/footer";
 import Navbar from "./components/constants/navbar";
 
 export default function Home() {
@@ -8,10 +10,11 @@ export default function Home() {
     
     <section className="w-full h-auto flex flex-col  justify-center items-center">
       <Banner/>
-      <div className="w-full h-screen "></div>
+      <ViewComponents/>
     </section>
-
-    <div className="w-full h-80 "></div>
+    
+    <Footer/>
+    
   </div>
   );
 }

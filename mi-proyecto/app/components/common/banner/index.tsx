@@ -1,57 +1,140 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
+// ── Data ──────────────────────────────────────────────
+const slides = [
+  {
+    title: "Clean & Minimal",
+    description: "DUI Component está diseñado para mantenerse fuera de tu camino. Estética sin fricción.",
+  },
+  {
+    title: "Accessible by default",
+    description: "Cada componente cumple con WCAG 2.1. Accesibilidad no es un extra, es el estándar.",
+  },
+  {
+    title: "Ready to ship",
+    description: "Copia, pega y despliega. Componentes listos para producción desde el primer día.",
+  },
+];
+
+const stats = [
+  { value: "+ 2 / 150",  label: "Components",        color: "slate" },
+  { value: "98% / 100%", label: "Accessibility Score", color: "rose"  },
+  { value: "1 / 1",      label: "Development Team",   color: "slate" },
+];
+
+// ── Sub-components ────────────────────────────────────
+function Slide({ slide, index, isActive }) {
+  return (
+    <div
+      className="absolute transition-all duration-700 ease-in-out"
+      style={{
+        opacity: isActive ? 1 : 0,
+        transform: isActive ? "translateY(0)" : "translateY(12px)",
+        pointerEvents: isActive ? "auto" : "none",
+      }}
+    >
+      <p className="text-slate-500 text-xs font-thin">
+        0{index + 1} — 0{slides.length}
+      </p>
+      <h2 className="text-slate-200 text-2xl uppercase font-thin">
+        {slide.title}
+      </h2>
+      <p className="text-white/50 text-xs font-thin max-w-sm">
+        {slide.description}
+      </p>
+    </div>
+  );
+}
+
+function SlideIndicator({ index, isActive, onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      aria-label={`Slide ${index + 1}`}
+      className="transition-all duration-500"
+      style={{
+        width: isActive ? "28px" : "8px",
+        height: "4px",
+        borderRadius: "0px",
+        background: isActive ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.35)",
+      }}
+    />
+  );
+}
+
+function StatItem({ value, label, color }) {
+  return (
+    <div>
+      <p className={`text-xs font-thin ${color === "rose" ? "text-rose-500" : ""}`}>
+        {value}
+      </p>
+      <p className={`text-xs font-thin ${color === "rose" ? "text-rose-500/50" : "text-slate-500/50"}`}>
+        {label}
+      </p>
+    </div>
+  );
+}
+
+// ── Main Component ────────────────────────────────────
 export default function Banner() {
-    return (
-      <div className="w-full font-thin">
-        <section className="w-full h-80 bg-linear-to-br from-slate-800 via-slate-500 to-slate-500 flex justify-center items-center py-10">
-          <div className="w-full max-w-7xl h-full flex justify-end items-end">
-            <span className="text-white text-xs tracking-widest font-thin">v0.0.2</span>
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <section className="w-full font-thin">
+
+      <section className="relative w-full h-96 bg-linear-to-br from-slate-800 via-slate-500 to-slate-500 flex flex-col justify-center items-center overflow-hidden">
+
+        <div className="w-full max-w-7xl flex flex-col justify-center">
+          {slides.map((slide, i) => (
+            <Slide key={i} slide={slide} index={i} isActive={i === current} />
+          ))}
+        </div>
+
+        <div className="w-full max-w-7xl absolute bottom-6 flex flex-row items-center gap-2 py-20">
+          {slides.map((_, i) => (
+            <SlideIndicator key={i} index={i} isActive={i === current} onClick={() => setCurrent(i)} />
+          ))}
+        </div>
+
+      </section>
+
+      <section className="w-full flex justify-center items-center py-40 text-slate-500 font-thin text-xs">
+        <div className="w-full max-w-7xl flex items-center justify-between">
+
+          {/* Profile */}
+          <div className="flex items-center gap-4">
+            <Link
+              href="https://github.com/Dempserayo"
+              className="w-10 h-10 bg-slate-500 border border-slate-500 hover:bg-rose-200/50 hover:text-rose-500 hover:border-rose-500 transition-all duration-500 text-white flex items-center justify-center"
+            >
+              <span className="uppercase">ma</span>
+            </Link>
+            <div>
+              <p className="text-xs font-thin">Miguel Angel J P</p>
+              <p className="text-slate-500/50 text-xs font-thin">Dempserayo · Creator & Maintainer</p>
+            </div>
           </div>
-        </section>
-  
-        <section className="w-full flex justify-center items-center p-20 text-slate-500 font-thin text-xs">
-            <section className="w-full max-w-7xl flex flex-row gap-4">
-                
-                <section className="w-full flex items-center justify-between">
-                    {/* Perfil  */}
-                    <div className="w-auto flex justify-center items-center gap-4">
-                      <Link href='https://github.com/Dempserayo' className="w-10 h-10 bg-slate-500 hover:bg-slate-400 transition-all duration-500 text-white flex items-center justify-center">
-                          <span className="uppercase">ma</span>
-                      </Link>
 
-                      <div>
-                        <p className="text-xs font-thin">Miguel Angel J P</p>
-                        <p className="text-slate-500/50 text-xs font-thin">Dempserayo · Creator & Maintainer</p>
-                      </div>
-                    </div>
+          {/* Stats */}
+          <div className="flex items-center gap-4">
+            {stats.map((stat) => (
+              <StatItem key={stat.label} {...stat} />
+            ))}
+          </div>
 
+        </div>
+      </section>
 
-                    {/* Info  */}
-                    <div className="w-auto flex justify-center items-center gap-4">
-                      <>
-                        <div>
-                          <p className="text-xs font-thin">+ 2 / 150 </p>
-                          <p className="text-slate-500/50 text-xs font-thin">Components</p>
-                        </div>
-                      </>
-                      <>
-                        <div>
-                          <p className="text-xs font-thin">98% / 100%</p>
-                          <p className="text-slate-500/50 text-xs font-thin">Accessibility Score</p>
-                        </div>
-                      </>
-                      <>
-                        <div>
-                          <p className="text-xs font-thin"> 1 / 1</p>
-                          <p className="text-slate-500/50 text-xs font-thin">Development Team</p>
-                        </div>
-                      </>
-        
-                    </div>
-                </section>
-            
-            </section>
-        </section>
-      </div>
-    );
-  }
+    </section>
+  );
+}
