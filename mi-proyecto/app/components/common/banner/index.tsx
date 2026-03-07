@@ -90,7 +90,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <section className="w-full font-thin">
+    <section className="w-full font-thin flex flex-col justify-center items-center">
 
       <section className="relative w-full h-96 bg-linear-to-br from-slate-800 via-slate-500 to-slate-500 flex flex-col justify-center items-center overflow-hidden">
 
@@ -108,7 +108,7 @@ export default function Banner() {
 
       </section>
 
-      <section className="w-full flex justify-center items-center py-40 text-slate-500 font-thin text-xs">
+      <section className="w-full max-w-7xl flex justify-center items-center py-40 text-slate-500 font-thin text-xs border-b border-slate-200">
         <div className="w-full max-w-7xl flex items-center justify-between">
 
           {/* Profile */}
@@ -130,6 +130,20 @@ export default function Banner() {
             {stats.map((stat) => (
               <StatItem key={stat.label} {...stat} />
             ))}
+          </div>
+         
+         
+          {/* Stats */}
+          <div className="flex items-center gap-4">
+              <span>
+                <Link href='https://www.npmjs.com/package/dempserayo-ui' className="hover:text-rose-500 transition-all duration-500 cursor-pointer">0.0.2</Link>
+                <p className="text-slate-500/50">Version</p>
+              </span>
+              <span>
+                <Link href='https://www.npmjs.com/package/dempserayo-ui' className="hover:text-rose-500 transition-all duration-500 cursor-pointer">Click Here</Link>
+                <p className="text-slate-500/50">Documentation</p>
+              </span>
+           
           </div>
 
         </div>

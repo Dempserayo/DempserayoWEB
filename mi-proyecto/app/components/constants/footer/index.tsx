@@ -3,7 +3,7 @@ import { FiGithub, FiMoon, FiSend } from "react-icons/fi";
 
 export default function Footer(){
     return(
-        <section className="w-full max-w-7xl h-80 flex items-center text-xs font-thin text-slate-500">
+        <section className="w-full max-w-7xl h-auto py-40 flex items-center text-xs font-thin text-slate-500">
             <section className="w-full flex flex-col gap-2">
                 
                 <div className="flex flex-row gap-4">

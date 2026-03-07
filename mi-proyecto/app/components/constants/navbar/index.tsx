@@ -1,7 +1,7 @@
 
 export default function Navbar() {
     return(
-        <nav className="w-full max-w-7xl h-auto py-20  flex flex-row justify-between items-center text-xs text-slate-500 font-thin  border-b border-slate-300">
+        <nav className="w-full max-w-7xl h-auto py-20  flex flex-row justify-between items-center text-xs text-slate-500 font-thin ">
           <section className="flex flex-row  items-center gap-4">
             <p className="font-black text-xl">D-UI</p>
             <p className="text-xs">Component</p>
