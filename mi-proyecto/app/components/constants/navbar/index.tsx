@@ -1,3 +1,4 @@
+import { FiSearch } from "react-icons/fi";
 
 export default function Navbar() {
     return(
@@ -7,17 +8,17 @@ export default function Navbar() {
             <p className="text-xs">Component</p>
           </section>
 
+          
+
           <section className="flex flex-row gap-4">
             <p className="cursor-pointer hover:text-rose-500 border-b border-slate-100 hover:border-rose-500 py-2 transition-all duration-500">Docs</p>
             <p className="cursor-pointer hover:text-rose-500 border-b border-slate-100 hover:border-rose-500 py-2 transition-all duration-500">Installation</p>
             <p className="cursor-pointer hover:text-rose-500 border-b border-slate-100 hover:border-rose-500 py-2 transition-all duration-500">Components</p>
             <p className="cursor-pointer hover:text-rose-500 border-b border-slate-100 hover:border-rose-500 py-2 transition-all duration-500">Showroom</p>
+            <p className="cursor-pointer hover:text-rose-500 border-b border-slate-100 hover:border-rose-500 py-2 flex justify-center items-center transition-all duration-500"><FiSearch /></p>
           </section>
 
-          {/* <section className="flex flex-row gap-4">
-            <p className="w-auto h-auto flex justify-center items-center text-lg cursor-pointer hover:text-rose-500"><FiGithub /></p>
-            <p className="w-auto h-auto flex justify-center items-center text-lg cursor-pointer hover:text-rose-500"><FiDownloadCloud /></p>
-          </section> */}
+       
         </nav>
     )
 }
