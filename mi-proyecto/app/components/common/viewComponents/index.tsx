@@ -1,4 +1,5 @@
-import { FiArrowUpRight } from "react-icons/fi";
+import Link from "next/link";
+import { FiArrowUpRight, FiPlus } from "react-icons/fi";
 
 export default function ViewComponents() {
     return(
@@ -8,18 +9,36 @@ export default function ViewComponents() {
             <section className="w-full max-w-7xl h-auto font-thin text-xs text-slate-500  flex flex-row gap-2">
                 <>
                     <section className="w-full h-auto flex flex-row gap-2">
-                        <div className="w-full h-80 flex flex-row justify-between bg-transparent border border-slate-200 p-8 cursor-pointer hover:bg-rose-200/50 hover:border-rose-500 hover:text-rose-500 transition-all duration-500">
-                            <p className="uppercase">Layout</p>
-                            <FiArrowUpRight />
-                        </div>
+                        <Link href='/view/component' className="w-full h-80 flex flex-col bg-transparent border border-slate-200 p-8 cursor-pointer hover:bg-rose-200/50 hover:border-rose-500 hover:text-rose-500 transition-all duration-500">
+                            <span className="w-full flex flex-row justify-between">
+                                <p className="uppercase">Layout</p>
+                                <FiArrowUpRight />
+                            </span>
+                            <div className="w-full h-full flex flex-col justify-between">
+                                <span className="w-full h-full"></span>
+                                <span className="w-full h-full flex flex-row items-end p-4">
+                                    <p className="w-4 h-4 bg-slate-500"></p>
+                                    <p className="w-4 h-4 bg-slate-400"></p>
+                                </span>
+                            </div>
+                        </Link>
                     </section>
                 </>
                 <>
                     <section className="w-full h-auto flex flex-row gap-2">
-                        <div className="w-full h-80 flex flex-row justify-between bg-transparent border border-slate-200 p-8 cursor-pointer hover:bg-rose-200/50 hover:border-rose-500 hover:text-rose-500 transition-all duration-500">
-                            <p className="uppercase">Footers</p>
-                            <FiArrowUpRight />
-                        </div>
+                    <Link href='/view/component' className="w-full h-80 flex flex-col bg-transparent border border-slate-200 p-8 cursor-pointer hover:bg-rose-200/50 hover:border-rose-500 hover:text-rose-500 transition-all duration-500">
+                            <span className="w-full flex flex-row justify-between">
+                                <p className="uppercase">Footer</p>
+                                <FiArrowUpRight />
+                            </span>
+                            <div className="w-full h-full flex flex-col justify-between">
+                                <span className="w-full h-full"></span>
+                                <span className="w-full h-full flex flex-row items-end p-4">
+                                    <p className="w-4 h-4 bg-slate-500"></p>
+                                    <p className="w-4 h-4 bg-slate-400"></p>
+                                </span>
+                            </div>
+                        </Link>
                     </section>
                 </>
             </section>
@@ -28,10 +47,22 @@ export default function ViewComponents() {
             <section className="w-full max-w-7xl h-auto font-thin text-xs text-slate-500  flex flex-row gap-2">
                 <>
                     <section className="w-full h-auto flex flex-row gap-2">
-                        <div className="w-full h-80 flex flex-row justify-between bg-transparent border border-slate-200 p-8 cursor-pointer hover:bg-rose-200/50 hover:border-rose-500 hover:text-rose-500 transition-all duration-500">
-                            <p className="uppercase">Banners</p>
-                            <FiArrowUpRight />
-                        </div>
+                    <Link href='/view/component' className="w-full h-80 flex flex-col bg-transparent border border-slate-200 p-8 cursor-pointer hover:bg-rose-200/50 hover:border-rose-500 hover:text-rose-500 transition-all duration-500">
+                            <span className="w-full flex flex-row justify-between">
+                                <p className="uppercase">Banners</p>
+                                <FiArrowUpRight />
+                            </span>
+                            <div className="w-full h-full flex flex-col justify-between">
+                                <span className="w-full h-full"></span>
+                                <span className="w-full h-full flex flex-row items-end p-4">
+                                    <p className="w-4 h-4 bg-rose-500"></p>
+                                    <p className="w-4 h-4 bg-slate-800"></p>
+                                    <p className="w-4 h-4 bg-slate-700"></p>
+                                    <p className="w-4 h-4 bg-slate-600"></p>
+                                    <p className="w-4 h-4 bg-slate-500"></p>
+                                </span>
+                            </div>
+                        </Link>
                     </section>
                 </>
             </section>
