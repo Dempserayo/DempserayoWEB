@@ -4,8 +4,8 @@ import { FiCopy } from "react-icons/fi";
 
 export default function ViewDownload() {
     return(
-        <section className="w-full h-96 bg-slate-500 flex flex-col justify-center items-center overflow-hidden gap-20" id="Download">
-            <section className="w-full max-w-7xl flex flex-col gap-4">
+        <section className="w-full h-96 bg-slate-500 hidden sm:flex flex-col justify-center items-center overflow-hidden gap-20" id="Download">
+            <section className="w-full max-w-7xl flex flex-col gap-4 p-20">
                 <p className="text-slate-200 text-xs uppercase font-thin">
                     Get started in seconds
                 </p>
