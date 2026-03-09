@@ -108,7 +108,7 @@ export default function Banner() {
 
       </section>
 
-      <section className="w-full flex justify-center items-center py-0 sm:py-40 px-10    text-slate-500 font-thin text-xs sm:border-b border-slate-200">
+      <section className="w-full flex justify-center items-center mb-20 sm:mb-0 sm:py-40 px-10    text-slate-500 font-thin text-xs sm:border-b border-slate-200">
         <div className="w-full max-w-7xl flex items-center justify-between">
 
           {/* Profile */}
