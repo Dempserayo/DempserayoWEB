@@ -3,8 +3,32 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+// ── Types ─────────────────────────────────────────────
+type SlideData = {
+  title: string;
+  description: string;
+};
+
+type SlideProps = {
+  slide: SlideData;
+  index: number;
+  isActive: boolean;
+};
+
+type SlideIndicatorProps = {
+  index: number;
+  isActive: boolean;
+  onClick: () => void;
+};
+
+type StatItemProps = {
+  value: string;
+  label: string;
+  color: string;
+};
+
 // ── Data ──────────────────────────────────────────────
-const slides = [
+const slides: SlideData[] = [
   {
     title: "Clean & Minimal",
     description: "DUI Component está diseñado para mantenerse fuera de tu camino. Estética sin fricción.",
@@ -19,14 +43,14 @@ const slides = [
   },
 ];
 
-const stats = [
+const stats: StatItemProps[] = [
   { value: "+ 2 / 150",  label: "Components",        color: "slate" },
   { value: "98% / 100%", label: "Accessibility Score", color: "rose"  },
   { value: "1 / 1",      label: "Development Team",   color: "slate" },
 ];
 
 // ── Sub-components ────────────────────────────────────
-function Slide({ slide, index, isActive }) {
+function Slide({ slide, index, isActive }: SlideProps) {
   return (
     <div
       className="absolute transition-all duration-700 ease-in-out"
@@ -49,7 +73,7 @@ function Slide({ slide, index, isActive }) {
   );
 }
 
-function SlideIndicator({ index, isActive, onClick }) {
+function SlideIndicator({ index, isActive, onClick }: SlideIndicatorProps) {
   return (
     <button
       onClick={onClick}
@@ -65,7 +89,7 @@ function SlideIndicator({ index, isActive, onClick }) {
   );
 }
 
-function StatItem({ value, label, color }) {
+function StatItem({ value, label, color }: StatItemProps) {
   return (
     <div>
       <p className={`text-xs font-thin ${color === "rose" ? "text-rose-500" : ""}`}>
@@ -108,7 +132,7 @@ export default function Banner() {
 
       </section>
 
-      <section className="w-full flex justify-center items-center mb-20 sm:mb-0 sm:py-40 px-10    text-slate-500 font-thin text-xs sm:border-b border-slate-200">
+      <section className="w-full flex justify-center items-center mb-20 sm:mb-0 sm:py-40 px-10 text-slate-500 font-thin text-xs sm:border-b border-slate-200">
         <div className="w-full max-w-7xl flex items-center justify-between">
 
           {/* Profile */}
@@ -131,19 +155,17 @@ export default function Banner() {
               <StatItem key={stat.label} {...stat} />
             ))}
           </div>
-         
-         
-          {/* Stats */}
+
+          {/* Links */}
           <div className="hidden sm:flex items-center gap-4">
-              <span>
-                <Link href='https://www.npmjs.com/package/dempserayo-ui' className="hover:text-rose-500 transition-all duration-500 cursor-pointer">0.0.2</Link>
-                <p className="text-slate-500/50">Version</p>
-              </span>
-              <span>
-                <Link href='https://www.npmjs.com/package/dempserayo-ui' className="hover:text-rose-500 transition-all duration-500 cursor-pointer">Click Here</Link>
-                <p className="text-slate-500/50">Documentation</p>
-              </span>
-           
+            <span>
+              <Link href="https://www.npmjs.com/package/dempserayo-ui" className="hover:text-rose-500 transition-all duration-500 cursor-pointer">0.0.2</Link>
+              <p className="text-slate-500/50">Version</p>
+            </span>
+            <span>
+              <Link href="https://www.npmjs.com/package/dempserayo-ui" className="hover:text-rose-500 transition-all duration-500 cursor-pointer">Click Here</Link>
+              <p className="text-slate-500/50">Documentation</p>
+            </span>
           </div>
 
         </div>
