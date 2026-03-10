@@ -8,7 +8,7 @@ Luego de esto, podremos usar alguno de los siguientes comandos, siendo el mas co
 
 
 ```bash
-https://bekind-frontend.vercel.app/
+https://dempserayo-web.vercel.app/
 ```
 ```bash
 npm run dev
