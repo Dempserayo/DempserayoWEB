@@ -95,7 +95,7 @@ function StatItem({ value, label, color }: StatItemProps) {
       <p className={`text-xs font-thin ${color === "rose" ? "text-rose-500" : ""}`}>
         {value}
       </p>
-      <p className={`text-xs font-thin ${color === "rose" ? "text-rose-500/50" : "text-slate-500/50"}`}>
+      <p className={`text-xs font-thin ${color === "rose" ? "text-rose-500/50" : ""}`}>
         {label}
       </p>
     </div>
@@ -115,62 +115,60 @@ export default function Banner() {
 
   return (
     <section className="w-full font-thin flex flex-col justify-center items-center">
+        <section className="relative w-full h-96 px-10 bg-linear-to-br from-slate-800 via-slate-500 to-slate-400 hidden sm:flex flex-col justify-center items-center overflow-hidden">
 
-      <section className="relative w-full h-96 px-10 bg-linear-to-br from-slate-800 via-slate-500 to-slate-500 hidden sm:flex flex-col justify-center items-center overflow-hidden">
-
-        <div className="w-full max-w-7xl flex flex-col justify-center">
-          {slides.map((slide, i) => (
-            <Slide key={i} slide={slide} index={i} isActive={i === current} />
-          ))}
-        </div>
-
-        <div className="w-full max-w-7xl absolute bottom-6 flex flex-row items-center gap-2 py-20 px-10">
-          {slides.map((_, i) => (
-            <SlideIndicator key={i} index={i} isActive={i === current} onClick={() => setCurrent(i)} />
-          ))}
-        </div>
-
-      </section>
-
-      <section className="w-full flex justify-center items-center mb-20 sm:mb-0 sm:py-40 px-10 text-slate-500 font-thin text-xs sm:border-b border-slate-200">
-        <div className="w-full max-w-7xl flex items-center justify-between">
-
-          {/* Profile */}
-          <div className="flex w-full items-center gap-4">
-            <Link
-              href="https://github.com/Dempserayo"
-              className="w-10 h-10 bg-slate-500 border border-slate-500 hover:bg-rose-200/50 hover:text-rose-500 hover:border-rose-500 transition-all duration-500 text-white flex items-center justify-center"
-            >
-              <span className="uppercase">ma</span>
-            </Link>
-            <div>
-              <p className="text-xs font-thin">Miguel Angel J P</p>
-              <p className="text-slate-500/50 text-xs font-thin">Dempserayo · Creator & Maintainer</p>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="hidden xl:flex w-full sm:items-center gap-4">
-            {stats.map((stat) => (
-              <StatItem key={stat.label} {...stat} />
+          <div className="w-full max-w-7xl flex flex-col justify-center">
+            {slides.map((slide, i) => (
+              <Slide key={i} slide={slide} index={i} isActive={i === current} />
             ))}
           </div>
 
-          {/* Links */}
-          <div className="hidden sm:flex items-center gap-4">
-            <span>
-              <Link href="https://www.npmjs.com/package/dempserayo-ui" className="hover:text-rose-500 transition-all duration-500 cursor-pointer">0.0.2</Link>
-              <p className="text-slate-500/50">Version</p>
-            </span>
-            <span>
-              <Link href="https://www.npmjs.com/package/dempserayo-ui" className="hover:text-rose-500 transition-all duration-500 cursor-pointer">Click Here</Link>
-              <p className="text-slate-500/50">Documentation</p>
-            </span>
+          <div className="w-full max-w-7xl absolute bottom-6 flex flex-row items-center gap-2 py-20 px-10">
+            {slides.map((_, i) => (
+              <SlideIndicator key={i} index={i} isActive={i === current} onClick={() => setCurrent(i)} />
+            ))}
           </div>
 
-        </div>
-      </section>
+        </section>
 
+        <section className="w-full flex justify-center items-center mb-20 sm:mb-0 sm:py-40 px-10 font-thin text-xs sm:border-b border-slate-200">
+          <div className="w-full max-w-7xl flex items-center justify-between">
+
+            {/* Profile */}
+            <div className="flex w-full items-center gap-4">
+              <Link
+                href="https://github.com/Dempserayo"
+                className="w-10 h-10 border border-slate-200/50 hover:bg-rose-200/50 hover:text-rose-500 hover:border-rose-500 transition-all duration-500 flex items-center justify-center"
+              >
+                <span className="uppercase">ma</span>
+              </Link>
+              <div>
+                <p className="text-xs font-thin">Miguel Angel J P</p>
+                <p className="text-xs font-thin">Dempserayo · Creator & Maintainer</p>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="hidden xl:flex w-full sm:items-center gap-4">
+              {stats.map((stat) => (
+                <StatItem key={stat.label} {...stat} />
+              ))}
+            </div>
+
+            {/* Links */}
+            <div className="hidden sm:flex items-center gap-4">
+              <span>
+                <Link href="https://www.npmjs.com/package/dempserayo-ui" className="hover:text-rose-500 transition-all duration-500 cursor-pointer">0.0.2</Link>
+                <p>Version</p>
+              </span>
+              <span>
+                <Link href="https://www.npmjs.com/package/dempserayo-ui" className="hover:text-rose-500 transition-all duration-500 cursor-pointer">Click Here</Link>
+                <p>Documentation</p>
+              </span>
+            </div>
+
+          </div>
+        </section>
     </section>
   );
 }

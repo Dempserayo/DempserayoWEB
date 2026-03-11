@@ -3,7 +3,7 @@ import { FiGithub, FiMoon, FiSend } from "react-icons/fi";
 
 export default function Footer(){
     return(
-        <section className="w-full h-auto px-10 py-40 flex items-center justify-center text-xs font-thin text-slate-500">
+        <section className="w-full h-auto px-10 py-40 flex items-center justify-center text-xs font-thin">
             <section className="w-full max-w-7xl  flex flex-col gap-2">
                 <div className="flex flex-col sm:flex-row gap-4">
                     <Link href='/' className="border-b border-slate-200 hover:border-rose-500 py-2  hover:text-rose-500  transition-all duration-500">Documentation</Link>
