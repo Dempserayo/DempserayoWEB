@@ -6,7 +6,7 @@ export default function Navbar() {
         <nav className="w-full h-auto py-20 px-10   flex flex-row justify-center items-center text-xs font-thin ">
           <section className="w-full max-w-7xl flex flex-row  justify-between items-center">
             <section className="flex flex-row  items-center gap-4">
-              <Link href='/' className="font-black text-xl">D-UI</Link>
+              <Link href='/' className="font-black text-xl text-slate-500 hover:text-rose-500 transition-all duration-500">D-UI</Link>
               <p className="text-xs">Component</p>
             </section>
 

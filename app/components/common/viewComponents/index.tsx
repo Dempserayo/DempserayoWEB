@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight, FiPackage } from "react-icons/fi";
 
 export default function ViewComponents() {
     return(
@@ -15,12 +15,23 @@ export default function ViewComponents() {
                                 <FiArrowUpRight />
                             </span>
                             <div className="w-full h-full flex flex-col justify-between">
-                                <span className="w-full h-full"></span>
-                                <span className="w-full h-full flex flex-row items-end p-4 gap-1">
-                                    <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
-                                    <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
-                                    <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
-                                </span>
+                                <div className="w-full h-full flex justify-center items-center  text-xs font-thin">
+                                    {/* <p>Nada por el momento</p> */}
+                                </div>
+                                <div className="w-full h-auto flex flex-row justify-between items-center gap-1">
+                                    <span className="flex flex-row gap-1">
+                                        <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
+                                        <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
+                                        <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
+                                    </span>
+                                    <span className="flex flex-row justify-center items-center gap-2">
+                                        <p className="text-slate-500 p-2">Actualizado</p>
+                                        <p className="flex flex-row gap-2 items-center justify-center">
+                                            <FiPackage />
+                                            0 / 0
+                                        </p>
+                                    </span>
+                                </div>
                             </div>
                         </Link>
                     </section>
@@ -33,11 +44,23 @@ export default function ViewComponents() {
                                 <FiArrowUpRight />
                             </span>
                             <div className="w-full h-full flex flex-col justify-between">
-                                <span className="w-full h-full"></span>
-                                <span className="w-full h-full flex flex-row items-end p-4 gap-1">
-                                    <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
-                                    <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
-                                </span>
+                                <div className="w-full h-full flex justify-center items-center  text-xs font-thin">
+                                    {/* <p>Nada por el momento</p> */}
+                                </div>
+                                <div className="w-full h-auto flex flex-row justify-between items-center gap-1">
+                                    <span className="flex flex-row gap-1">
+                                        <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
+                                        <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
+                                        <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
+                                    </span>
+                                    <span className="flex flex-row justify-center items-center gap-2">
+                                        <p className="text-rose-500 p-2">Mantenimiento</p>
+                                        <p className="flex flex-row gap-2 items-center justify-center">
+                                            <FiPackage />
+                                            0 / 0
+                                        </p>
+                                    </span>
+                                </div>
                             </div>
                         </Link>
                     </section>
@@ -54,12 +77,23 @@ export default function ViewComponents() {
                                 <FiArrowUpRight />
                             </span>
                             <div className="w-full h-full flex flex-col justify-between">
-                                <span className="w-full h-full"></span>
-                                <span className="w-full h-full flex flex-row items-end p-4 gap-1">
-                                    <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
-                                    <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
-                                    <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
-                                </span>
+                                <div className="w-full h-full flex justify-center items-center  text-xs font-thin">
+                                    {/* <p>Nada por el momento</p> */}
+                                </div>
+                                <div className="w-full h-auto flex flex-row justify-between items-center gap-1">
+                                    <span className="flex flex-row gap-1">
+                                        <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
+                                        <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
+                                        <p className="w-4 h-1 bg-slate-200 group-hover:bg-rose-300 transition-all duration-500"></p>
+                                    </span>
+                                    <span className="flex flex-row justify-center items-center gap-2">
+                                        <p className="text-rose-500 p-2">Mantenimiento</p>
+                                        <p className="flex flex-row gap-2 items-center justify-center">
+                                            <FiPackage />
+                                            0 / 0
+                                        </p>
+                                    </span>
+                                </div>
                             </div>
                         </Link>
                     </section>
