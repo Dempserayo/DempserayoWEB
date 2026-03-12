@@ -20,7 +20,7 @@ export default function ViewDownload() {
 
                     <button 
                         onClick={() => { navigator.clipboard.writeText("npm i dempserayo-ui");}} 
-                        className="bg-slate-800/50 text-slate-500 border border-slate-500 hover:border-rose-500 hover:bg-rose-200/50 hover:text-rose-500  w-20 h-20 hidden sm:flex justify-center items-center transition-all duration-500 group cursor-pointer" 
+                        className="bg-slate-800/50 text-slate-500 border border-slate-500 hover:border-rose-500 hover:bg-rose-200/50 hover:text-rose-500  w-20 h-20 hidden sm:flex justify-center items-center transition-all duration-500 group cursor-not-allowed" 
                         title="Copy to clipboard"
                     >
                         <FiCopy />                
