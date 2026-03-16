@@ -23,9 +23,9 @@ export default function Footer(){
                         <button className="transiton-all duration-500 hover:text-rose-500 cursor-pointer">
                             <FiMoon className="w-4 h-4" />
                         </button>
-                        <button className="transiton-all duration-500 hover:text-rose-500 cursor-pointer">
+                        <Link href='https://github.com/Dempserayo?tab=overview&from=2026-03-01&to=2026-03-15' className="transiton-all duration-500 hover:text-rose-500 cursor-pointer">
                             <FiGithub className="w-4 h-4" />
-                        </button>
+                        </Link>
                         <button className="transiton-all duration-500 hover:text-rose-500 cursor-pointer">
                             <FiSend className="w-4 h-4" />
                         </button>
