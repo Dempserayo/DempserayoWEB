@@ -44,7 +44,7 @@ const slides: SlideData[] = [
 ];
 
 const stats: StatItemProps[] = [
-  { value: "+ 2 / 150",  label: "Components",        color: "slate" },
+  { value: "+ 0 / 150",  label: "Components",        color: "slate" },
   { value: "98% / 100%", label: "Accessibility Score", color: "rose"  },
   { value: "1 / 1",      label: "Development Team",   color: "slate" },
 ];
