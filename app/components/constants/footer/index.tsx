@@ -7,7 +7,7 @@ export default function Footer(){
         <section className="w-full h-auto px-10 py-40 flex items-center justify-center text-xs font-thin">
             <section className="w-full max-w-7xl  flex flex-col gap-2">
                 <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href='/' className="border-b border-slate-200 hover:border-rose-500 py-2  hover:text-rose-500">Documentation</Link>
+                    {/* <Link href='/' className="border-b border-slate-200 hover:border-rose-500 py-2  hover:text-rose-500">Documentation</Link> */}
                     <Link href='/' className="border-b border-slate-200 hover:border-rose-500 py-2  hover:text-rose-500">Frequently Asked Questions</Link>
                     <Link href='/' className="border-b border-slate-200 hover:border-rose-500 py-2  hover:text-rose-500">Contribute to the Project</Link>
                 </div>
