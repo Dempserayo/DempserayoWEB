@@ -1,5 +1,5 @@
-import Banner from "./components/common/banner";
-import Navbar from "./components/constants/navbar";
+import Banner from "./components/banner";
+import Navbar from "./components/navbar";
 
 export default function Home() {
   return (
