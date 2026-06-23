@@ -1,6 +1,4 @@
 "use client";
-
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Banner() {
@@ -33,10 +31,9 @@ export default function Banner() {
   }, []);
 
   return (
-    <main className="w-full font-thin flex flex-col justify-between gap-20">
-
+    <main className="w-full h-auto font-thin flex flex-col justify-between">
       {/* Banner */}
-      <section className="w-full h-80 bg-linear-to-br from-slate-800 via-slate-500 to-slate-400 flex items-center justify-center">
+      <section className="w-full h-96 bg-linear-to-br from-slate-800 via-slate-500 to-slate-400 flex items-center justify-center">
         <div className="w-full max-w-7xl">
 
           <p className="text-slate-500 text-xs">
@@ -76,76 +73,6 @@ export default function Banner() {
 
         </div>
       </section>
-
-      {/* Footer */}
-      <section className="w-full h-auto text-xs">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-
-          {/* Perfil */}
-          <div className="flex items-center gap-4">
-            <Link
-              href="https://github.com/Dempserayo"
-              className="w-10 h-10 border border-white/30 flex items-center justify-center hover:border-rose-500 hover:text-rose-500 transition"
-            >
-              MA
-            </Link>
-
-            <div>
-              <p className="text-sm">Miguel Angel J P</p>
-              <p className="text-xs text-slate-500">
-                Dempserayo · Creator & Maintainer
-              </p>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="hidden lg:flex gap-10">
-
-            <div>
-              <p>+0 / 150</p>
-              <p className="text-slate-500">Components</p>
-            </div>
-
-            <div>
-              <p className="text-rose-500">98% / 100%</p>
-              <p className="text-rose-500/60">Accessibility</p>
-            </div>
-
-            <div>
-              <p>1 / 1</p>
-              <p className="text-slate-500">Development Team</p>
-            </div>
-
-          </div>
-
-          {/* Links */}
-          <div className="hidden md:flex gap-8">
-
-            <div>
-              <Link
-                href="https://www.npmjs.com/package/dempserayo-ui"
-                className="hover:text-rose-500 transition"
-              >
-                0.0.4
-              </Link>
-              <p className="text-slate-500">Version</p>
-            </div>
-
-            <div>
-              <Link
-                href="https://www.npmjs.com/package/dempserayo-ui"
-                className="hover:text-rose-500 transition"
-              >
-                Documentation
-              </Link>
-              <p className="text-slate-500">Docs</p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
     </main>
   );
 }
